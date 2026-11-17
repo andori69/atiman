@@ -1,0 +1,25 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies and builds
+node_modules
+dist
+dist-ssr
+.vite
+
+# Environment files (secrets)
+.env
+*.local
+
+# Editor and OS files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+
+# AI build notes (kept local)
+CLAUDE.md
+ATIMAN_DIAGRAM_PROMPTS.md
+ATIMAN_VIDEO_SCRIPT.md
