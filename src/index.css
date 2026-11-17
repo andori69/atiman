@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  /* Remove blue flash on tap across all devices */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Eliminate 300ms tap delay on all interactive elements */
+button, a, input, select, textarea, [role="button"], label {
+  touch-action: manipulation;
+}
+
+/* Smooth inertia scrolling on iOS for all scrollable containers */
+.overflow-y-auto, .overflow-auto, .overflow-y-scroll {
+  -webkit-overflow-scrolling: touch;
+  /* Prevent scroll from leaking to parent on mobile */
+  overscroll-behavior: contain;
+}
+
+/* Prevent text inflate on orientation change (iOS) */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 10%, rgba(196,181,253,0.55) 0%, transparent 52%),
+    radial-gradient(ellipse 60% 50% at 87% 8%, rgba(167,243,208,0.4) 0%, transparent 46%),
+    radial-gradient(ellipse 70% 60% at 65% 94%, rgba(251,207,232,0.45) 0%, transparent 46%),
+    radial-gradient(ellipse 55% 55% at 4% 82%, rgba(186,230,253,0.45) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(254,240,138,0.18) 0%, transparent 60%),
+    #f0edff;
+  background-attachment: fixed;
+  color: #1e1b4b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to   { opacity: 1 }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px) scale(0.98) }
+  to   { opacity: 1; transform: translateY(0) scale(1) }
+}
